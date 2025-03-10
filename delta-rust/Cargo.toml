@@ -3,5 +3,12 @@ name = "delta-rust"
 version = "0.1.0"
 edition = "2024"
 
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
 [dependencies]
+image = "0.25.5"
+screenshots = "0.8.10"
 windows = { version = "0.60.0", features = ["Win32_UI_WindowsAndMessaging"] }
